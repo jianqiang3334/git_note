@@ -36,6 +36,10 @@
 
 > git branch name # 创建分支name
 
+> git branch -d name # 删除分支
+
+> git branch -D name # 如果没有合并修改, 使用-D强行删除
+
 ###git merge
 > git merge branch # 使用Fast-forward模式合并branch分支到当前分支, 可能会出现冲突
 > git merge --no-ff -m "say something" branch # --no-ff禁用Fast-forward模式, 这样的好处是即使删除了分支branch, 在历史记录中依然可以看到这次合并
@@ -64,3 +68,9 @@
 
 ###git push
 > git push -u remotegit branch # 将本地库上传到remotegit的branch分支, '-u'选项是为了关联本地master和远程master, 第一次用, 以后就不用了
+
+###git stash
+> git stash # 将当前工作区保存下来
+> git stash list # 列出当前保存的工作区
+> git stash pop # 恢复上一个保存的工作区
+> git stash apply stash@{num} # 恢复到指定num(对应的是stash list列出的数字)的工作区
