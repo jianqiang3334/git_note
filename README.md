@@ -37,7 +37,8 @@
 > git branch name # 创建分支name
 
 ###git merge
-> git merge branch # 合并branch分支到当前分支, 可能会出现冲突
+> git merge branch # 使用Fast-forward模式合并branch分支到当前分支, 可能会出现冲突
+> git merge --no-ff -m "say something" branch # --no-ff禁用Fast-forward模式, 这样的好处是即使删除了分支branch, 在历史记录中依然可以看到这次合并
 
 ###git reset
 > git reset --hard HEAD^ # 恢复到上一次, HEAD^^恢复到上上一次, 以此类推, 也可以使用数字如: HEAD~100
